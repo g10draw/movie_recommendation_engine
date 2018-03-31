@@ -54,8 +54,3 @@ def movie_data_scraper(movie_name):
 	img_src = soup.find('img', attrs={'class':'poster'})['src']
 	overview = soup.find('div', attrs={'class':'overview'}).p.text
 	return [title, img_src, overview]
-
-
-if __name__ == '__main__':
-	app.run(debug=True)
-	# app.run(debug=False)

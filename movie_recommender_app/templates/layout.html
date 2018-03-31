@@ -13,16 +13,19 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.min.css" rel="stylesheet"/>
+
 	<!-- Font Awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">  
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+	<link  href="{{ url_for('static', filename='styles/main.css') }}" rel="stylesheet" type="text/css">
 
 	<title>Movie Recommendation System</title>
 </head>
-<body style="background-color: #1d1d1d;color: #fff;font-size: 16px;">
+<body>
 
 	{% include "_nav/_navbar.html" %}
 

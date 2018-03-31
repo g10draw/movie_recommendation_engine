@@ -1,10 +1,30 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="home-content" style="padding-top: 40px;">
-	
-	<div class="start-head">
-		<h1>Movie Recommendations</h1>
-		<p style="">Welcome to movie recommendations, we recommend movies according to movies you like. The more you watch, the more accurate we reccommend.</p>
+<script type="text/javascript" src="{{ url_for('static', filename='js/image-picker.js') }}"></script>
+<div class="home-content">
+
+	<div class="head-content">
+			<h1>Start here..</h1>
+			<p align="center">Welcome to the movie recommendation model, we recommend movies according to your taste. The more you watch, the more accurate we reccommend.</p>
+	</div>
+
+	<div id="popular-movies">
+		<div class="row">
+			<h2>Popular Movies</h2>
+		</div>
+	</div>
+
+	<div class="row select-images">
+		<form method="POST" action="/recommendations" align="center">
+			<select name="movie_data" id="selectImage" class="image-picker show-labels show-html" data-limit="3" multiple="multiple" required>
+				<option data-img-src="../static/img/star-wars.jpg" data-img-label="Star Wars" value="1398">Star Wars</option>
+				<option data-img-src="../static/img/air.jpg" data-img-label="Air Force One" value="32">Air Force One (1997)</option>
+				<option data-img-src="../static/img/toy.jpg" data-img-label="Toy Story" value="1523">Toy Story</option>
+				<option data-img-src="../static/img/scream.jpg" data-img-label="Scream" value="1284">Scream (1996)</option>
+			</select>
+			<button class="btn btn-default">Get Recommendations</button>
+		</form>
 	</div>
 </div>
+
 {% endblock %}

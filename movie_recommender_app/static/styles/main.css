@@ -1,0 +1,63 @@
+body {
+    font-family: Arimo,Arial,Helvetica,lucida grande,sans-serif;
+    letter-spacing: -.03em;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: #1d1d1d;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+
+.nav-bar {
+    height: 50px;
+    padding-top: 5px;
+}
+
+.nav-bar {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 8;
+    background: #1d1d1d;
+    overflow: hidden;
+    color: #919191;
+    border-bottom: 1px solid #2f2f2f;
+    backface-visibility: hidden;
+}
+
+.pull-left {
+    float: left!important;
+    margin-left: 20px;
+    
+}
+
+.nav-logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family:  'Berkshire Swash', cursive;
+    color: #6AC045;
+    padding-bottom: 10px;
+}
+
+.home-content {
+    padding-top: 40px;
+}
+
+.head-content p {
+    font-size: .95em;
+    color: #ccc;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 21px;
+}
+
+#popular-movies h2 {
+    font-size: 1.15em;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}

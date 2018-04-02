@@ -79,4 +79,12 @@ body {
     padding-bottom: 15px;
 }
 
+.movie-list {
+    padding-bottom: 15px;
+}
+
+.movie-list img {
+    margin-bottom: 5px;
+}
+
 

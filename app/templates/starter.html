@@ -5,17 +5,20 @@
 
 	<div class="head-content">
 			<h1>Start here..</h1>
-			<p align="center">Welcome to the movie recommendation model, we recommend movies according to your taste. The more you watch, the more accurate we reccommend.</p>
+			<div class="row">
+					<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<p>Welcome to the <sapn style="color:#6AC045;">movie recommendation system</sapn>. 
+						We recommend movies of your preferences. 
+						The more you watch, the more accurate we recommend movies. 
+						To get recommendations, select one to three movies of your own interest.</p>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
 	</div>
 
-	<div id="popular-movies">
-		<div class="row">
-			<h2>Popular Movies</h2>
-		</div>
-	</div>
-
-	<div class="row select-images">
-		<form method="POST" action="/recommendations" align="center">
+	<div class="select-images">
+		<form method="POST" action="/recommendations" >
 			<select name="movie_data" id="selectImage" class="image-picker show-labels show-html" data-limit="3" multiple="multiple" required>
 				<option data-img-src="../static/img/star-wars.jpg" data-img-label="Star Wars" value="1398">Star Wars</option>
 				<option data-img-src="../static/img/air.jpg" data-img-label="Air Force One" value="32">Air Force One (1997)</option>

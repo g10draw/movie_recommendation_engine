@@ -46,18 +46,25 @@ body {
     padding-top: 40px;
 }
 
+.head-content {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
 .head-content p {
     font-size: .95em;
     color: #ccc;
-    width: 80%;
+    text-align: justify;
     margin: 0 auto;
     line-height: 21px;
 }
 
-#popular-movies h2 {
-    font-size: 1.15em;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    padding-bottom: 20px;
-    margin-bottom: 25px;
+.select-images {
+    padding-left: 50px;
+    display:inline-block;
+}
+
+.select-images button {
+    margin-left:-50px;
 }

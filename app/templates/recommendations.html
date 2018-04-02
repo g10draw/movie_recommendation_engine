@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="movie-content"  style="padding-top: 40px;">
+<div class="movie-content">
+    <h3>Recommended Movies</h3>
     <div class="row">
         {% for movie in movies %}
             <div class="col-md-3">
-                <img src="{{movie[1]}}" alt="{{movie[0]}}" class="thumbnail" width="200" height="310">
+                <img src="{{movie[1]}}" alt="{{movie[0]}}" class="thumbnail" width="200" height="270">
             </div>
         {% endfor %}
     </div>

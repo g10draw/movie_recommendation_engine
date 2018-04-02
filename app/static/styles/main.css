@@ -68,3 +68,15 @@ body {
 .select-images button {
     margin-left:-50px;
 }
+
+.movie-content {
+    margin-top: 65px;
+    margin-left: 50px;
+}
+
+.movie-content h3 {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+

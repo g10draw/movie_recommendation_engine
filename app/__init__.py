@@ -28,12 +28,14 @@ def index():
 @app.route('/recommendations', methods=['GET', 'POST'])
 def recommendations():
 	picked_movies = request.form.getlist('movie_data')
+
 	corr_mats = []
 	for movie in picked_movies:
 		corr_mats.append(corr_mat[int(movie)])
+
 	recommendations = []
 	for cm in corr_mats:
-		recommendations.append(list(movie_names[(cm < 1.0) & (cm > 0.9)]))
+		recommendations.append(list(movie_names[(cm < 1.0) & (cm > 0.94)]))
 	recommendations = sum(recommendations, [])
 	movie_details = [movie_data_scraper(movie) for movie in recommendations]
 	return render_template('recommendations.html', movies = movie_details)

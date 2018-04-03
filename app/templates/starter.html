@@ -2,21 +2,16 @@
 {% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/image-picker.js') }}"></script>
 <div class="home-content">
-
 	<div class="head-content">
-			<h1>Start here..</h1>
-			<div class="row">
-					<div class="col-md-2"></div>
-				<div class="col-md-8">
-					<p>Welcome to <sapn style="color:#6AC045;">Movie Recommendations</sapn> page. 
-						We recommend movies based on correlation of your preferences. 
-						The more you watch, the more accurate we recommend movies. 
-						To get started with recommendations, pick one to three movies of your choice.</p>
-				</div>
-				<div class="col-md-2"></div>
+		<h1>Start here..</h1>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<p>Welcome to <sapn style="color:#6AC045;">Movie Recommendations</sapn> page. We recommend movies based on correlation of your preferences. The more you watch, the more accurate we recommend movies. To get started with recommendations, pick one to three movies of your choice.</p>
 			</div>
+			<div class="col-md-2"></div>
+		</div>
 	</div>
-
 	<div class="select-images">
 		<form method="POST" action="/recommendations" >
 			<select name="movie_data" id="selectImage" class="image-picker show-labels show-html" data-limit="3" multiple="multiple" required>
@@ -29,5 +24,4 @@
 		</form>
 	</div>
 </div>
-
 {% endblock %}

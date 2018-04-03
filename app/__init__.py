@@ -1,3 +1,7 @@
+"""
+This is a simple movie recommendations engine that uses collaberative filtering to recommend movies.
+"""
+
 import os
 import pickle
 import urllib
@@ -12,21 +16,24 @@ with open(r'pkl_objects/corr_mat.pickle', 'rb') as f:
 with open(r'pkl_objects/movie_names.pickle', 'rb') as f:
 	movie_names = pickle.load(f)
 
-app = Flask(__name__)
-app.config.update(dict(
-    SECRET_KEY="powerful secretkey",
-    WTF_CSRF_SECRET_KEY="a csrf secret key"
-))
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_pyfile('config.py')
 
-movies_list = list(movie_names)
+movies_list = list(movie_names)  # list of movie names 
 base_url = 'https://www.themoviedb.org'  # url to scrape movie details
 
 @app.route('/')
 def index():
+	"""
+	Home page handler
+	"""
 	return render_template('starter.html')
 
 @app.route('/recommendations', methods=['GET', 'POST'])
 def recommendations():
+	"""
+	Returns recommended movies
+	"""
 	picked_movies = request.form.getlist('movie_data')
 
 	corr_mats = []
@@ -42,13 +49,19 @@ def recommendations():
 
 
 def movie_data_scraper(movie_name):
-	movie_name = movie_name[:movie_name.find('(')-1].replace(':', '')  # remove (year) part
+	"""
+	Returns title, image source and info of a movie
+	"""
+	# remove the year from title
+	movie_name = movie_name[:movie_name.find('(')-1].replace(':', '')
 	url = base_url+'/search?query='+movie_name.replace(' ', '+')
 
+	# find movie info link
 	html_data = urllib.request.urlopen(url)
 	soup = BeautifulSoup(html_data, 'html.parser')
 	next_url = base_url+soup.find('p', attrs={'class': 'view_more'}).a['href']
 
+	# scrape movie data
 	html_data = urllib.request.urlopen(next_url)
 	soup = BeautifulSoup(html_data, 'html.parser')
 

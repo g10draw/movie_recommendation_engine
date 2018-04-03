@@ -36,7 +36,7 @@ def recommendations():
 	recommendations = []
 	for cm in corr_mats:
 		recommendations.append(list(movie_names[(cm < 1.0) & (cm > 0.94)]))
-	recommendations = sum(recommendations, [])
+	recommendations = list(set(sum(recommendations, [])))
 	movie_details = [movie_data_scraper(movie) for movie in recommendations]
 	return render_template('recommendations.html', movies = movie_details)
 

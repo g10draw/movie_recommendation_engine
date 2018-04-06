@@ -7,8 +7,12 @@ import pickle
 import urllib
 
 import numpy
+from authomatic import Authomatic
+from authomatic.adapters import WerkzeugAdapter
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, session, url_for, redirect
+
+from config import Config
 
 with open(r'pkl_objects/corr_mat.pickle', 'rb') as f:
 	corr_mat = pickle.load(f)
